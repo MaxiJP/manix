@@ -29,7 +29,7 @@ brew install nasm qemu
 
 
 ## Build
-Currently, there is no sort of a Makefile or a uild script. Instead, just use nasm.
+Currently, there is no sort of a Makefile or a build script. Instead, just use nasm.
 
 To build, simply input the code,
 ```
