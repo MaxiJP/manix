@@ -6,35 +6,35 @@
 
 ; Set video mode
 
-mov ah, 00h
-mov al, 13h
+mov ah, 0x00
+mov al, 0x13
 int 10h
 
 ; Write a string
 
-mov ah, 13h
-mov al, 00h
+mov ah, 0x13
+mov al, 0x00
 
-mov dl, 11h              ; Column (Shift by 5 chars)
-mov dh, 00h              ; Row
+mov dl, 0x11             ; Column (Shift by 5 chars)
+mov dh, 0x00             ; Row
 
-mov bx, 7Fh              ; Colour
+mov bx, 0x7F             ; Colour
 mov cx, start_text_len   ; Text Length
 mov bp, start_text       ; Text variable
 int 10h
 
-mov dl, 0Ah              ; Column
-mov dh, 03h              ; Row
+mov dl, 0x0A             ; Column
+mov dh, 0x03              ; Row
 
-mov bx, 60h
+mov bx, 0x60
 mov cx, start_text_2_len
 mov bp, start_text_2
 int 10h
 
 ; Draw a smiley
-mov ah, 0ch
-mov al, 0fh
-mov bh, 00h
+mov ah, 0x0c
+mov al, 0x0f
+mov bh, 0x00
 
 mov cx, 158d
 mov dx, 100d
