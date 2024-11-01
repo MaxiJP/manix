@@ -15,7 +15,7 @@ int 10h
 mov ah, 13h
 mov al, 00h
 
-mov dl, 10h              ; Column (Shift by 5 chars)
+mov dl, 11h              ; Column (Shift by 5 chars)
 mov dh, 00h              ; Row
 
 mov bx, 7Fh              ; Colour
@@ -69,7 +69,7 @@ mov dx, 96d
 int 10h
 
 ; Define my strings
-start_text: db "Max OS!"
+start_text: db "Manix!"
 start_text_len equ $ - start_text
 
 start_text_2: db "(c) 2024 Max & Co."
